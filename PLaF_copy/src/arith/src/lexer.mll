@@ -5,6 +5,7 @@
 {
 open Parser
 
+exception Error of string
 }
 
 (* The second section of the lexer definition defines *identifiers*
@@ -72,5 +73,7 @@ rule read =
   | id       { ID (Lexing.lexeme lexbuf) }
   | int      { INT (int_of_string (Lexing.lexeme lexbuf)) }
   | eof      { EOF }
+  | _
+    { raise (Error (Printf.sprintf "At offset %d: unexpected character.\n" (Lexing.lexeme_start lexbuf))) }
 
 (* And that's the end of the lexer definition. *)

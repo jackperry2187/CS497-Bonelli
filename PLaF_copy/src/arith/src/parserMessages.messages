@@ -8,7 +8,7 @@ prog: TIMES
 ##
 ##
 
-insert random message
+insert random message 0
 
 prog: SND TIMES
 ##
@@ -20,7 +20,7 @@ prog: SND TIMES
 ## SND
 ##
 
-insert random message
+insert random message 1
 
 prog: SND LPAREN TIMES
 ##
@@ -32,7 +32,7 @@ prog: SND LPAREN TIMES
 ## SND LPAREN
 ##
 
-insert random message
+insert random message 2
 
 prog: SETREF TIMES
 ##
@@ -44,7 +44,7 @@ prog: SETREF TIMES
 ## SETREF
 ##
 
-insert random message
+insert random message 3
 
 prog: SETREF LPAREN TIMES
 ##
@@ -56,7 +56,7 @@ prog: SETREF LPAREN TIMES
 ## SETREF LPAREN
 ##
 
-insert random message
+insert random message 4
 
 prog: SET TIMES
 ##
@@ -68,7 +68,7 @@ prog: SET TIMES
 ## SET
 ##
 
-insert random message
+insert random message 5
 
 prog: SET ID TIMES
 ##
@@ -80,7 +80,7 @@ prog: SET ID TIMES
 ## SET ID
 ##
 
-insert random message
+insert random message 6
 
 prog: SET ID EQUALS TIMES
 ##
@@ -92,7 +92,7 @@ prog: SET ID EQUALS TIMES
 ## SET ID EQUALS
 ##
 
-insert random message
+insert random message 7
 
 prog: PROC TIMES
 ##
@@ -104,7 +104,7 @@ prog: PROC TIMES
 ## PROC
 ##
 
-insert random message
+insert random message 8
 
 prog: PROC LPAREN TIMES
 ##
@@ -116,7 +116,7 @@ prog: PROC LPAREN TIMES
 ## PROC LPAREN
 ##
 
-insert random message
+insert random message 9
 
 prog: PROC LPAREN ID TIMES
 ##
@@ -128,7 +128,7 @@ prog: PROC LPAREN ID TIMES
 ## PROC LPAREN ID
 ##
 
-insert random message
+insert random message 10
 
 prog: PROC LPAREN ID RPAREN TIMES
 ##
@@ -140,7 +140,7 @@ prog: PROC LPAREN ID RPAREN TIMES
 ## PROC LPAREN ID RPAREN
 ##
 
-insert random message
+insert random message 11
 
 prog: PROC LPAREN ID RPAREN LBRACE TIMES
 ##
@@ -152,7 +152,7 @@ prog: PROC LPAREN ID RPAREN LBRACE TIMES
 ## PROC LPAREN ID RPAREN LBRACE
 ##
 
-insert random message
+insert random message 12
 
 prog: PAIR TIMES
 ##
@@ -164,7 +164,7 @@ prog: PAIR TIMES
 ## PAIR
 ##
 
-insert random message
+insert random message 13
 
 prog: PAIR LPAREN TIMES
 ##
@@ -176,7 +176,7 @@ prog: PAIR LPAREN TIMES
 ## PAIR LPAREN
 ##
 
-insert random message
+insert random message 14
 
 prog: NOT TIMES
 ##
@@ -188,7 +188,7 @@ prog: NOT TIMES
 ## NOT
 ##
 
-insert random message
+insert random message 15
 
 prog: NOT LPAREN TIMES
 ##
@@ -200,7 +200,7 @@ prog: NOT LPAREN TIMES
 ## NOT LPAREN
 ##
 
-insert random message
+insert random message 16
 
 prog: NEWREF TIMES
 ##
@@ -212,7 +212,7 @@ prog: NEWREF TIMES
 ## NEWREF
 ##
 
-insert random message
+insert random message 17
 
 prog: NEWREF LPAREN TIMES
 ##
@@ -224,7 +224,7 @@ prog: NEWREF LPAREN TIMES
 ## NEWREF LPAREN
 ##
 
-insert random message
+insert random message 18
 
 prog: LPAREN TIMES
 ##
@@ -238,7 +238,7 @@ prog: LPAREN TIMES
 ## LPAREN
 ##
 
-insert random message
+insert random message 19
 
 prog: LPAREN MINUS TIMES
 ##
@@ -250,7 +250,7 @@ prog: LPAREN MINUS TIMES
 ## LPAREN MINUS
 ##
 
-insert random message
+insert random message 20
 
 prog: LETREC TIMES
 ##
@@ -262,7 +262,7 @@ prog: LETREC TIMES
 ## LETREC
 ##
 
-insert random message
+insert random message 21
 
 prog: LETREC ID TIMES
 ##
@@ -274,7 +274,7 @@ prog: LETREC ID TIMES
 ## LETREC ID
 ##
 
-insert random message
+insert random message 22
 
 prog: LETREC ID LPAREN TIMES
 ##
@@ -286,7 +286,7 @@ prog: LETREC ID LPAREN TIMES
 ## LETREC ID LPAREN
 ##
 
-insert random message
+insert random message 23
 
 prog: LETREC ID LPAREN ID TIMES
 ##
@@ -298,7 +298,7 @@ prog: LETREC ID LPAREN ID TIMES
 ## LETREC ID LPAREN ID
 ##
 
-insert random message
+insert random message 24
 
 prog: LETREC ID LPAREN ID RPAREN TIMES
 ##
@@ -310,7 +310,7 @@ prog: LETREC ID LPAREN ID RPAREN TIMES
 ## LETREC ID LPAREN ID RPAREN
 ##
 
-insert random message
+insert random message 25
 
 prog: LETREC ID LPAREN ID RPAREN EQUALS TIMES
 ##
@@ -322,7 +322,7 @@ prog: LETREC ID LPAREN ID RPAREN EQUALS TIMES
 ## LETREC ID LPAREN ID RPAREN EQUALS
 ##
 
-insert random message
+insert random message 26
 
 prog: LET TIMES
 ##
@@ -334,7 +334,7 @@ prog: LET TIMES
 ## LET
 ##
 
-insert random message
+insert random message 27
 
 prog: LET ID TIMES
 ##
@@ -346,7 +346,7 @@ prog: LET ID TIMES
 ## LET ID
 ##
 
-insert random message
+insert random message 28
 
 prog: LET ID EQUALS TIMES
 ##
@@ -358,7 +358,7 @@ prog: LET ID EQUALS TIMES
 ## LET ID EQUALS
 ##
 
-insert random message
+insert random message 29
 
 prog: ISZERO TIMES
 ##
@@ -370,7 +370,7 @@ prog: ISZERO TIMES
 ## ISZERO
 ##
 
-insert random message
+insert random message 30
 
 prog: ISZERO LPAREN TIMES
 ##
@@ -382,7 +382,7 @@ prog: ISZERO LPAREN TIMES
 ## ISZERO LPAREN
 ##
 
-insert random message
+insert random message 31
 
 prog: IF TIMES
 ##
@@ -394,7 +394,7 @@ prog: IF TIMES
 ## IF
 ##
 
-insert random message
+insert random message 33
 
 prog: FST TIMES
 ##
@@ -406,7 +406,7 @@ prog: FST TIMES
 ## FST
 ##
 
-insert random message
+insert random message 35
 
 prog: FST LPAREN TIMES
 ##
@@ -418,7 +418,7 @@ prog: FST LPAREN TIMES
 ## FST LPAREN
 ##
 
-insert random message
+insert random message 36
 
 prog: DEREF TIMES
 ##
@@ -430,7 +430,7 @@ prog: DEREF TIMES
 ## DEREF
 ##
 
-insert random message
+insert random message 37
 
 prog: DEREF LPAREN TIMES
 ##
@@ -442,7 +442,7 @@ prog: DEREF LPAREN TIMES
 ## DEREF LPAREN
 ##
 
-insert random message
+insert random message 38
 
 prog: DEBUG TIMES
 ##
@@ -454,7 +454,7 @@ prog: DEBUG TIMES
 ## DEBUG
 ##
 
-insert random message
+insert random message 39
 
 prog: DEBUG LPAREN TIMES
 ##
@@ -466,7 +466,7 @@ prog: DEBUG LPAREN TIMES
 ## DEBUG LPAREN
 ##
 
-insert random message
+insert random message 40
 
 prog: BEGIN TIMES
 ##
@@ -478,7 +478,7 @@ prog: BEGIN TIMES
 ## BEGIN
 ##
 
-insert random message
+insert random message 41
 
 prog: ABS TIMES
 ##
@@ -490,7 +490,7 @@ prog: ABS TIMES
 ## ABS
 ##
 
-insert random message
+insert random message 42
 
 prog: ABS LPAREN TIMES
 ##
@@ -502,7 +502,7 @@ prog: ABS LPAREN TIMES
 ## ABS LPAREN
 ##
 
-insert random message
+insert random message 43
 
 prog: ABS LPAREN ID THEN
 ##
@@ -518,7 +518,7 @@ prog: ABS LPAREN ID THEN
 ## ABS LPAREN expr
 ##
 
-insert random message
+insert random message 44
 
 prog: ID TIMES TIMES
 ##
@@ -530,7 +530,7 @@ prog: ID TIMES TIMES
 ## expr TIMES
 ##
 
-insert random message
+insert random message 45
 
 prog: ID PLUS TIMES
 ##
@@ -542,7 +542,7 @@ prog: ID PLUS TIMES
 ## expr PLUS
 ##
 
-insert random message
+insert random message 48
 
 prog: ID PLUS ID LBRACE
 ##
@@ -558,7 +558,7 @@ prog: ID PLUS ID LBRACE
 ## expr PLUS expr
 ##
 
-insert random message
+insert random message 49
 
 prog: ID DIVIDED TIMES
 ##
@@ -570,7 +570,7 @@ prog: ID DIVIDED TIMES
 ## expr DIVIDED
 ##
 
-insert random message
+insert random message 50
 
 prog: ID MINUS TIMES
 ##
@@ -582,7 +582,7 @@ prog: ID MINUS TIMES
 ## expr MINUS
 ##
 
-insert random message
+insert random message 51
 
 prog: ID MINUS ID LBRACE
 ##
@@ -598,7 +598,7 @@ prog: ID MINUS ID LBRACE
 ## expr MINUS expr
 ##
 
-insert random message
+insert random message 53
 
 prog: BEGIN ID THEN
 ##
@@ -615,7 +615,7 @@ prog: BEGIN ID THEN
 ## expr
 ##
 
-insert random message
+insert random message 58
 
 prog: BEGIN ID SEMICOLON TIMES
 ##
@@ -627,7 +627,7 @@ prog: BEGIN ID SEMICOLON TIMES
 ## expr SEMICOLON
 ##
 
-insert random message
+insert random message 59
 
 prog: DEBUG LPAREN ID THEN
 ##
@@ -643,7 +643,7 @@ prog: DEBUG LPAREN ID THEN
 ## DEBUG LPAREN expr
 ##
 
-insert random message
+insert random message 61
 
 prog: DEREF LPAREN ID THEN
 ##
@@ -659,7 +659,7 @@ prog: DEREF LPAREN ID THEN
 ## DEREF LPAREN expr
 ##
 
-insert random message
+insert random message 63
 
 prog: FST LPAREN ID THEN
 ##
@@ -675,7 +675,7 @@ prog: FST LPAREN ID THEN
 ## FST LPAREN expr
 ##
 
-insert random message
+insert random message 65
 
 prog: IF ID SND
 ##
@@ -691,7 +691,7 @@ prog: IF ID SND
 ## IF expr
 ##
 
-insert random message
+insert random message 67
 
 prog: IF ID THEN TIMES
 ##
@@ -703,7 +703,7 @@ prog: IF ID THEN TIMES
 ## IF expr THEN
 ##
 
-insert random message
+insert random message 68
 
 prog: IF ID THEN ID THEN
 ##
@@ -719,7 +719,7 @@ prog: IF ID THEN ID THEN
 ## IF expr THEN expr
 ##
 
-insert random message
+insert random message 69
 
 prog: IF ID THEN ID ELSE TIMES
 ##
@@ -731,7 +731,7 @@ prog: IF ID THEN ID ELSE TIMES
 ## IF expr THEN expr ELSE
 ##
 
-insert random message
+insert random message 70
 
 prog: IF ID THEN ID ELSE ID LBRACE
 ##
@@ -747,7 +747,7 @@ prog: IF ID THEN ID ELSE ID LBRACE
 ## IF expr THEN expr ELSE expr
 ##
 
-insert random message
+insert random message 71
 
 prog: ISZERO LPAREN ID THEN
 ##
@@ -763,7 +763,7 @@ prog: ISZERO LPAREN ID THEN
 ## ISZERO LPAREN expr
 ##
 
-insert random message
+insert random message 72
 
 prog: LET ID EQUALS ID THEN
 ##
@@ -779,7 +779,7 @@ prog: LET ID EQUALS ID THEN
 ## LET ID EQUALS expr
 ##
 
-insert random message
+insert random message 74
 
 prog: LET ID EQUALS ID IN TIMES
 ##
@@ -791,7 +791,7 @@ prog: LET ID EQUALS ID IN TIMES
 ## LET ID EQUALS expr IN
 ##
 
-insert random message
+insert random message 75
 
 prog: LET ID EQUALS ID IN ID LBRACE
 ##
@@ -807,7 +807,7 @@ prog: LET ID EQUALS ID IN ID LBRACE
 ## LET ID EQUALS expr IN expr
 ##
 
-insert random message
+insert random message 76
 
 prog: LETREC ID LPAREN ID RPAREN EQUALS ID THEN
 ##
@@ -823,7 +823,7 @@ prog: LETREC ID LPAREN ID RPAREN EQUALS ID THEN
 ## LETREC ID LPAREN ID RPAREN EQUALS expr
 ##
 
-insert random message
+insert random message 77
 
 prog: LETREC ID LPAREN ID RPAREN EQUALS ID IN TIMES
 ##
@@ -835,7 +835,7 @@ prog: LETREC ID LPAREN ID RPAREN EQUALS ID IN TIMES
 ## LETREC ID LPAREN ID RPAREN EQUALS expr IN
 ##
 
-insert random message
+insert random message 78
 
 prog: LETREC ID LPAREN ID RPAREN EQUALS ID IN ID LBRACE
 ##
@@ -851,7 +851,7 @@ prog: LETREC ID LPAREN ID RPAREN EQUALS ID IN ID LBRACE
 ## LETREC ID LPAREN ID RPAREN EQUALS expr IN expr
 ##
 
-insert random message
+insert random message 79
 
 prog: LPAREN MINUS ID THEN
 ##
@@ -867,7 +867,7 @@ prog: LPAREN MINUS ID THEN
 ## LPAREN MINUS expr
 ##
 
-insert random message
+insert random message 80
 
 prog: LPAREN ID THEN
 ##
@@ -884,7 +884,7 @@ prog: LPAREN ID THEN
 ## LPAREN expr
 ##
 
-insert random message
+insert random message 82
 
 prog: LPAREN ID ID THEN
 ##
@@ -900,7 +900,7 @@ prog: LPAREN ID ID THEN
 ## LPAREN expr expr
 ##
 
-insert random message
+insert random message 84
 
 prog: NEWREF LPAREN ID THEN
 ##
@@ -916,7 +916,7 @@ prog: NEWREF LPAREN ID THEN
 ## NEWREF LPAREN expr
 ##
 
-insert random message
+insert random message 86
 
 prog: NOT LPAREN ID THEN
 ##
@@ -932,7 +932,7 @@ prog: NOT LPAREN ID THEN
 ## NOT LPAREN expr
 ##
 
-insert random message
+insert random message 88
 
 prog: PAIR LPAREN ID THEN
 ##
@@ -948,7 +948,7 @@ prog: PAIR LPAREN ID THEN
 ## PAIR LPAREN expr
 ##
 
-insert random message
+insert random message 90
 
 prog: PAIR LPAREN ID COMMA TIMES
 ##
@@ -960,7 +960,7 @@ prog: PAIR LPAREN ID COMMA TIMES
 ## PAIR LPAREN expr COMMA
 ##
 
-insert random message
+insert random message 91
 
 prog: PAIR LPAREN ID COMMA ID THEN
 ##
@@ -976,7 +976,7 @@ prog: PAIR LPAREN ID COMMA ID THEN
 ## PAIR LPAREN expr COMMA expr
 ##
 
-insert random message
+insert random message 92
 
 prog: PROC LPAREN ID RPAREN LBRACE ID THEN
 ##
@@ -992,7 +992,7 @@ prog: PROC LPAREN ID RPAREN LBRACE ID THEN
 ## PROC LPAREN ID RPAREN LBRACE expr
 ##
 
-insert random message
+insert random message 94
 
 prog: SET ID EQUALS ID LBRACE
 ##
@@ -1008,7 +1008,7 @@ prog: SET ID EQUALS ID LBRACE
 ## SET ID EQUALS expr
 ##
 
-insert random message
+insert random message 96
 
 prog: SETREF LPAREN ID THEN
 ##
@@ -1024,7 +1024,7 @@ prog: SETREF LPAREN ID THEN
 ## SETREF LPAREN expr
 ##
 
-insert random message
+insert random message 97
 
 prog: SETREF LPAREN ID COMMA TIMES
 ##
@@ -1036,7 +1036,7 @@ prog: SETREF LPAREN ID COMMA TIMES
 ## SETREF LPAREN expr COMMA
 ##
 
-insert random message
+insert random message 98
 
 prog: SETREF LPAREN ID COMMA ID THEN
 ##
@@ -1052,7 +1052,7 @@ prog: SETREF LPAREN ID COMMA ID THEN
 ## SETREF LPAREN expr COMMA expr
 ##
 
-insert random message
+insert random message 99
 
 prog: SND LPAREN ID THEN
 ##
@@ -1068,7 +1068,7 @@ prog: SND LPAREN ID THEN
 ## SND LPAREN expr
 ##
 
-insert random message
+insert random message 101
 
 prog: ID THEN
 ##
@@ -1084,5 +1084,5 @@ prog: ID THEN
 ## expr
 ##
 
-insert random message
+insert random message 104
 

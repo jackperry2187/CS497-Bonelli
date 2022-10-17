@@ -1,5 +1,6 @@
 open Ast
 open Ds
+open Errors
 
 (** [eval_expr e] evaluates expression [e] *)
 let rec eval_expr : expr -> int result =
@@ -40,6 +41,9 @@ let parse (s:string) : expr =
 (** [interp s] parses [s] and then evaluates it *)
 let interp (e:string) : int result =
   e |> parse |> eval_expr
+
+let parseWithErrors (s:string) =
+  parse2 s
 
 
 
