@@ -42,8 +42,13 @@ let parse (s:string) : expr =
 let interp (e:string) : int result =
   e |> parse |> eval_expr
 
-let parseWithErrors (s:string) =
-  parse2 s
+(** [parseWithErrors s] parses string [s] into an ast 
+    AND prints useful errors if any are present *)
+let parseWithErrors (s:string): unit =
+  match firstPass s with
+    | Succ -> ()
+    | LexErr -> ()
+    | ParseErr _ -> secondPass s
 
 
 

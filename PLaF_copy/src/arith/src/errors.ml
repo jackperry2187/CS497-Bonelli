@@ -6,9 +6,9 @@ module L = MenhirLib.LexerUtil
 
 type parse_result = Succ | LexErr | ParseErr of string
 
-let attempt1s s : parse_result =
+let firstPass s : parse_result =
 
-  (* Read the file; allocate and initialize a lexing buffer. *)
+  (* Read the string; allocate and initialize a lexing buffer. *)
   let lexbuf = Lexing.from_string s in
   (* Run the parser. *)
   match Parser.prog Lexer.read lexbuf with
@@ -110,7 +110,7 @@ let fail text buffer (checkpoint : _ I.checkpoint) =
   (* ; *)
   (* exit 1 *)
 
-let attempt2s s  =
+let secondPass s  =
   (* Allocate and initialize a lexing buffer. *)
   let lexbuf = Lexing.from_string s in
   (* Wrap the lexer and lexbuf together into a supplier, that is, a
@@ -126,10 +126,3 @@ let attempt2s s  =
   (* We do not handle [Lexer.Error] because we know that we will not
      encounter a lexical error during this second parsing run. *)
   I.loop_handle succeed (fail s buffer) supplier checkpoint
-
-
-let parse2 s =
-  match attempt1s s with
-  | Succ -> ()
-  | LexErr -> ()
-  | ParseErr _ -> attempt2s s
