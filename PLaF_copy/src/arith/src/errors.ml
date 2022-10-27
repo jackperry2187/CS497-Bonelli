@@ -4,28 +4,28 @@ open Ast
 module E = MenhirLib.ErrorReports
 module L = MenhirLib.LexerUtil
 
-type parse_result = Succ | LexErr | ParseErr of string
+type parse_result = Succ of expr | LexErr of string | ParseErr of string
 
 let firstPass s : parse_result =
 
-  (* Read the string; allocate and initialize a lexing buffer. *)
+  (* Read the file; allocate and initialize a lexing buffer. *)
   let lexbuf = Lexing.from_string s in
   (* Run the parser. *)
   match Parser.prog Lexer.read lexbuf with
 
   | v ->
       (* Success. The parser has produced a semantic value [v]. *)
-    let _ = printf "%s\n%!" (string_of_expr v)
-        in Succ
+    (* let _ = printf "%s\n%!" (string_of_expr v)
+        in Succ *)
     (* ; *)
     (*   exit 0 *)
+    Succ v
 
   | exception Lexer.Error msg ->
       (* A lexical error has occurred. *)
-    print_endline "lexical error";
-    let _ = eprintf "%s%!" msg
-    in LexErr
-      (* ;exit 1 *)
+      let _ = print_endline "Lexical Error Encountered" in
+      let _ = eprintf "%s%!" msg in
+      LexErr "Lexing error above"
 
   | exception Parser.Error ->
       (* A syntax error has occurred. *)
@@ -96,7 +96,7 @@ let succeed _v =
 (* [fail text buffer checkpoint] is invoked when parser has encountered a
    syntax error. *)
 
-let fail text buffer (checkpoint : _ I.checkpoint) =
+let fail text buffer (checkpoint : _ I.checkpoint) : string =
   (* Indicate where in the input file the error occurred. *)
   let location = L.range (E.last buffer) in
   (* Show the tokens just before and just after the error. *)
@@ -106,11 +106,12 @@ let fail text buffer (checkpoint : _ I.checkpoint) =
   (* Expand away the $i keywords that might appear in the message. *)
   let message = E.expand (get text checkpoint) message in
   (* Show these three components. *)
-  eprintf "%s%s%s%!" location indication message
+  let _ = eprintf "%s%s%s%!" location indication message in
+  "Parsing error above" (* forces string return type *)
   (* ; *)
   (* exit 1 *)
 
-let secondPass s  =
+let secondPass s : string =
   (* Allocate and initialize a lexing buffer. *)
   let lexbuf = Lexing.from_string s in
   (* Wrap the lexer and lexbuf together into a supplier, that is, a

@@ -44,11 +44,16 @@ let interp (e:string) : int result =
 
 (** [parseWithErrors s] parses string [s] into an ast 
     AND prints useful errors if any are present *)
-let parseWithErrors (s:string): unit =
+let parseWithErrors (s:string): expr =
   match firstPass s with
-    | Succ -> ()
-    | LexErr -> ()
-    | ParseErr _ -> secondPass s
+    | Succ expr -> expr
+    | LexErr msg -> failwith msg
+    | ParseErr s -> failwith (secondPass s)
+
+(** [interpWithErrors s] parses [s] with useful parsing errors
+    if they are present, or evaluates if they aren't *)
+let interpWithErrors (s: string) : int result = 
+  s |> parseWithErrors |> eval_expr
 
 
 
