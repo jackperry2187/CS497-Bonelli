@@ -14,22 +14,18 @@ let firstPass s : parse_result =
   match Parser.prog Lexer.read lexbuf with
 
   | v ->
-      (* Success. The parser has produced a semantic value [v]. *)
-    (* let _ = printf "%s\n%!" (string_of_expr v)
-        in Succ *)
-    (* ; *)
-    (*   exit 0 *)
+    (* Success. The parser has produced an expression [v]. *)
     Succ v
 
   | exception Lexer.Error msg ->
-      (* A lexical error has occurred. *)
-      let _ = print_endline "Lexical Error Encountered" in
-      let _ = eprintf "%s%!" msg in
-      LexErr "Lexing error above"
+    (* A lexical error has occurred. *)
+    let _ = print_endline "Lexical Error Encountered" in
+    let _ = eprintf "%s%!" msg in
+    LexErr "Lexing error above"
 
   | exception Parser.Error ->
-      (* A syntax error has occurred. *)
-      ParseErr s
+    (* A syntax error has occurred. *)
+    ParseErr s
 
 (* -------------------------------------------------------------------------- *)
 
@@ -78,10 +74,7 @@ let get text checkpoint i =
   | Some (I.Element (_, _, pos1, pos2)) ->
       show text (pos1, pos2)
   | None ->
-      (* The index is out of range. This should not happen if [$i]
-         keywords are correctly inside the syntax error message
-         database. The integer [i] should always be a valid offset
-         into the known suffix of the stack. *)
+      (* The index is out of range. This should not happen *)
       "???"
 
 (* [succeed v] is invoked when the parser has succeeded and produced a
@@ -108,8 +101,6 @@ let fail text buffer (checkpoint : _ I.checkpoint) : string =
   (* Show these three components. *)
   let _ = eprintf "%s%s%s%!" location indication message in
   "Parsing error above" (* forces string return type *)
-  (* ; *)
-  (* exit 1 *)
 
 let secondPass s : string =
   (* Allocate and initialize a lexing buffer. *)
