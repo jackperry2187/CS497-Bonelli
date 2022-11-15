@@ -1,5 +1,6 @@
 open Ast
 open Ds
+open Errors
 
 (* params * body * super * fields *)
 type method_decl = string list*Ast.expr*string*string list
@@ -340,4 +341,17 @@ let interpf (s:string) : exp_val result =
 let interpp () : exp_val result = 
   interpf "ex1"
 
+(** [parseWithErrors s] parses string [s] into an ast 
+    AND prints useful errors if any are present *)
+let parseWithErrors (s:string): prog =
+  match firstPass s with
+    | Succ prog -> prog
+    | LexErr msg -> failwith msg
+    | ParseErr s -> failwith (secondPass s)
+
+(** [interpWithErrors s] parses [s] with useful parsing errors
+    if they are present, or evaluates if they aren't *)
+let interpWithErrors (s: string) : exp_val result = 
+  let c = s |> parseWithErrors |> eval_prog in
+  run c
 
