@@ -238,7 +238,7 @@ prog: LPAREN TIMES
 ## LPAREN
 ##
 
-insert random message 19
+Expect an expression after '(' and before ')'.
 
 prog: LPAREN MINUS TIMES
 ##
@@ -530,7 +530,7 @@ prog: ID TIMES TIMES
 ## expr TIMES
 ##
 
-insert random message 45
+Expected an expression after '*'.
 
 prog: ID PLUS TIMES
 ##
@@ -542,7 +542,7 @@ prog: ID PLUS TIMES
 ## expr PLUS
 ##
 
-insert random message 48
+Expected an expression after '+'.
 
 prog: ID PLUS ID LBRACE
 ##
@@ -570,7 +570,7 @@ prog: ID DIVIDED TIMES
 ## expr DIVIDED
 ##
 
-insert random message 50
+Expected an expression after '/'.
 
 prog: ID MINUS TIMES
 ##
@@ -582,7 +582,7 @@ prog: ID MINUS TIMES
 ## expr MINUS
 ##
 
-insert random message 51
+Expected an expression after '-'.
 
 prog: ID MINUS ID LBRACE
 ##
@@ -884,7 +884,7 @@ prog: LPAREN ID THEN
 ## LPAREN expr
 ##
 
-insert random message 82
+Expected a ')' to close '('.
 
 prog: LPAREN ID ID THEN
 ##
