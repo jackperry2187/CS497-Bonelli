@@ -1016,7 +1016,7 @@ prog: LPAREN SELF COMMA SELF UNPAIR
 ## LPAREN expr COMMA expr
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE> 151
+Error 151: Expected a closing ')' for an opening '('.
 
 prog: LPAREN SELF COMMA TIMES
 ##
@@ -1028,7 +1028,7 @@ prog: LPAREN SELF COMMA TIMES
 ## LPAREN expr COMMA
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE> 150
+Error 150: Expected a second expression after seeing an opening '(', an expression, and a ','.
 
 prog: LPAREN SELF SELF UNPAIR
 ##
@@ -1064,7 +1064,7 @@ prog: LPAREN SELF THEN
 ## LPAREN expr
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE> 148
+Error 148: Expected a closing ')' for an opening '('.
 
 prog: LPAREN TIMES
 ##
@@ -1080,7 +1080,7 @@ prog: LPAREN TIMES
 ## LPAREN
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE> 54
+Error 54: Expected a valid expression and closing ')' for an opening '('.
 
 prog: NEW ID LPAREN TIMES
 ##
@@ -1333,7 +1333,7 @@ prog: SELF DIVIDED TIMES
 ## expr DIVIDED
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE> 102
+Error 102: Expected an expression after '/'.
 
 prog: SELF DOT UNPAIR
 ##
@@ -1374,7 +1374,7 @@ prog: SELF MINUS TIMES
 ## expr MINUS
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE> 104
+Error 104: Expected an expression after '-'.
 
 prog: SELF PLUS SELF METHOD
 ##
@@ -1403,7 +1403,7 @@ prog: SELF PLUS TIMES
 ## expr PLUS
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE> 100
+Error 100: Expected an expression after '+'.
 
 prog: SELF TIMES SELF METHOD
 ##
@@ -1432,7 +1432,7 @@ prog: SELF TIMES TIMES
 ## expr TIMES
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE> 94
+Error 94: Expected an expression after '*'.
 
 prog: SELF UNPAIR
 ##
