@@ -1,0 +1,67 @@
+
+class counter extends object {
+     field c
+     method initialize() {
+	  set c=1
+     }
+     method add(i) {
+        set c = c+i
+     }
+     method inc() {
+        send self add(1)
+	}
+    method dec() {
+        set c=c-1
+	}
+    method dec(x) {
+        set c=c-x
+    }
+    method read() { c }
+}
+
+class bkpcounter extends counter {
+      field bkp
+      method backup() {
+         set bkp = c
+	 }
+      method restore() {
+         set c = bkp
+      }
+}
+
+class loggedbc extends bkpcounter {
+     field b
+     field r
+     method initialize(ib,ir) {
+         begin
+	   super initialize();
+	   set b = ib;
+	   set r = ir
+	 end
+	 }
+    method backup() {
+        begin
+	  set b=b+1;
+	  super backup()
+	end
+	}
+   method restore() {
+       begin
+          set r=r+1;
+	  super restore()
+      end
+      }
+      method getr() { r}
+      method getb() { b} 
+}
+
+let nc = new loggedbc(0,0)
+in begin
+    send nc inc();
+    send nc dec(4);
+    send nc backup();
+    send nc inc();
+    send nc restore();
+    send nc restore();
+    list(send nc getb(), send nc read())
+  end

@@ -1,0 +1,30 @@
+
+class counter extends object {
+     field c
+     method initialize() {
+	  set c=1
+     }
+     method inc(i) {
+        set c = c+i
+     }
+     method inc() {
+        send self inc(1)
+	}
+    method dec() {
+        send self dec(1)
+	}
+    method dec(x) {
+        set c=c-x
+    }
+    method read() { c }
+}
+
+
+let nc = new counter()
+in begin
+    send nc inc();
+    send nc inc(20);
+    send nc dec(4);
+    send nc inc();
+    send nc read()
+  end
